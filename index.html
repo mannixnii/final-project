@@ -1,123 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Student Portfolio</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
-
-    
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <nav>
-            <h1 class="logo">MyPortfolio</h1>
+<nav class="navbar">
+    <div class="logo">
+        <img src="logo.png" alt="logo">
+        <span>Tagaan's Portfolio</span>
+    </div>
 
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#Academic Achivements">Achievements</a></li>
-                <li><a href="#Gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-            <div class="menu-btn" id="menu-btn">
-                ☰
-            </div>
-        </nav>
-    </header>
+<section id="home" class="section hero">
+    <div class="hero-content">
+         <div>
+            <img src="mnx.jpg" alt="Profile">
+        </div>
+        <h1>Hello, I'm Manny I. Tagaan</h1>
+        <p>Creative Developer & Designer</p>
 
-    <section class="hero" id="home">
-        <div class="hero-text">
-            <h2>Hello, I'm</h2>
-            <h1>Manny I. Tagaan</h1>
+        <div class="hero-buttons">
+            <a href="#projects" class="btn primary">View Projects</a>
+            <a href="#contact" class="btn secondary">Contact Me</a>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="section reveal">
+    <h2>About Me</h2>
+
+    <div class="about-content">
+        <img src="nix.jpg" alt="Profile">
+
+        <div>
             <p>
-                A passionate student who loves technology,
-                programming, and creativity.
+              Hi, I'm Manny I. Tagaan, a 19-year-old BSIT student from Bayugan City 
+              studying at Agusan del Sur State University. I am passionate about 
+              web development, programming, and technology. I enjoy creating 
+              websites, learning new skills, and exploring innovative solutions 
+              to real-world problems. In my free time, I solve Rubik's Cubes, 
+              play the guitar, and continuously improve my technical abilities. 
+              My goal is to become a skilled IT professional and develop projects 
+              that make a positive impact on people's lives.
             </p>
 
-            <a href="#contact" class="btn">Contact Me</a>
+            <div class="stats">
+                <div class="card">
+                    <h3>STUDENT</h3>
+                    <p>BSIT</p>
+                </div>
+
+                <div class="card">
+                    <h3>LOCATION</h3>
+                    <p>Philippines</p>
+                </div>
+
+                <div class="card">
+                    <h3>PASSION</h3>
+                    <p>Web Development</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="section reveal">
+    <h2>Projects & Skills</h2>
+
+    <div class="project-grid">
+
+        <div class="project-card">
+            <a href="https://github.com/mannixnii/Basic-JavaScript-Interaction-The-ASSCAT-Announcement-Board-" target="_blank">
+            <img src="project1.jpg" alt="Project 1">
+         </a>
+
+             <h3>Project 1</h3>
+              <p>The ADSSU Announcement Board.</p>
+        </div>
+        <div class="project-card">
+            <a href="https://github.com/mannixnii/manix.html" target="_blank">
+            <img src="project2.jpg" alt="Project 2">
+         </a>
+
+             <h3>Project 2</h3>
+              <p>flower project.</p>
+        </div>
+        <div class="project-card">
+            <a href="https://github.com/mannixnii/itpc100-midterm-Tagaan-1" target="_blank">
+            <img src="project3.jpg" alt="Project 3">
+         </a>
+
+             <h3>Project 3</h3>
+              <p>The ADSSU Announcement Board.</p>
         </div>
 
-        <div class="hero-image">
-            <img src="mnx.jpeg.jpg" alt="Student Photo">
+    </div>
+
+    <div class="skills">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>React</span>
+        <span>Photoshop</span>
+        <span>UI/UX</span>
+    </div>
+</section>
+
+<section id="gallery" class="section reveal">
+    <h2>Gallery</h2>
+
+    <div class="gallery-grid">
+        <img src="img1.jpg">
+        <img src="img.jpg">
+        <img src="img4.jpg">
+        <img src="img3.jpg">
+        <img src="photo4.jpg">
+        <img src="photo6.jpg">
+    </div>
+</section>
+
+<section id="contact" class="contact-section">
+
+    <h2>Contact Me</h2>
+
+    <div class="contact-container">
+
+        <!-- MESSAGE FORM -->
+        <div class="contact-box">
+            <h3>Message Me</h3>
+
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5"></textarea>
+
+                <button type="submit">Send</button>
+            </form>
         </div>
-    </section>
 
-    <section class="about" id="about">
-        <h2>About Me</h2>
+        <!-- CONTACT INFO -->
+        <div class="contact-box">
+            <h3>Contact Me</h3>
 
-        <p>
-            My name is Manny I. Tagaan, and I am a 19-years-old, 
-            Male currently taking up Bachelor of Science in Information 
-            Technology (BSIT) at Agusan del Sur State University. 
-            I live in Brgy. Charito Bayugan City Agusan Del Sur. 
-            As an IT student, I have developed a strong interest in technology, 
-            especially in web development and programming. I enjoy learning how 
-            websites and systems are created, and I find it exciting whenever 
-            I discover new things about technology.
+            <p>📧 mtagaan44@adssu.edu.ph</p>
+            <p>📱 +63 995 493 5694</p>
+            <p>📍 Bayugan City, Agusan del Sur</p>
+            <p>
+                <i class="fab fa-github"></i>
+                <a href="https://github.com/mannixnii" target="_blank">
+                    github.com/mannixnii
+                </a>
+            </p>
+        </div>
 
-            During my free time, I like spending time on activities such as solving 
-            rubik's cube, if Im at our house I play guitar, and doing nothing. 
-            These activities help me relax and also inspire me to become more 
-            creative and productive. I am someone who is willing to learn, improve, 
-            and face challenges with determination. Although learning programming 
-            and technology can sometimes be difficult, I see every challenge as an 
-            opportunity to grow and gain more experience.
+        <!-- SOCIALS -->
+        <div class="contact-box">
+            <h3>Follow Me</h3>
 
-         I also value hard work, responsibility, and patience because I believe 
-         these qualities are important in achieving my goals. My dream is to
-         become a successful IT professional someday and create useful projects or 
-         systems that can help people and make tasks easier. I know that success 
-          takes time and effort, so I continue to study, practice, and improve my 
-          skills step by step while working toward a better future.
-        </p>
-    </section>
+            <div class="social-links">
 
-    <section class="ahievements" id="ahievements">
-        <h2>My Achievements</h2>
+                <a href="https://www.facebook.com/manixnii" target="_blank">
+                    <img src="fbicon.jpg" alt="fb icon">
+                </a>
 
+                <a href="https://www.instagram.com/its_manix?igsh=cTd6djV6aDFxd2Rt" target="_blank">
+                    <img src="instaicon.jpg" alt="insta icon">
+                </a>
 
-    </section>
-
-    <section class="gallery" id="gallery">
-        <h2>Gallery</h2>
-
-        <div class="gallery-container">
-
-            <div class="gallery-card">
-
-              <img src="photo.jpg" alt="">
-              <img src="photo (2).jpg" alt="">
-             <img src="photo3.jpg" alt="">
-             <img src="photo4.jpg" alt="">
-             <img src="photo5.jpg" alt="">
-             <img src="photo6.jpg" alt="">
+                <a href="https://github.com/mannixnii" target="_blank">
+                    <img src="githubicon.jpg" alt="github icon">
+                </a>
 
             </div>
-
         </div>
-    </section>
 
-    <section class="contact" id="contact">
-        <h2>Contact Me</h2>
+    </div>
 
-        <form id="contactForm">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message"></textarea>
+</section>
 
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
-
+<div class="lightbox">
+    <img src="" alt="">
+</div>
     <footer>
         <p>© 2026 Student Portfolio | All Rights Reserved</p>
     </footer>
+<script src="script.js"></script>
 
-    <script src="script.js"></script>
 </body>
 </html>

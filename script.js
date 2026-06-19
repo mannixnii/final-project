@@ -1,18 +1,59 @@
-// MOBILE MENU
-const menuBtn = document.getElementById("menu-btn");
-const navLinks = document.querySelector(".nav-links");
+// Navbar Blur
 
-menuBtn.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", () => {
+    if(window.scrollY > 50){
+        navbar.classList.add("active");
+    }else{
+        navbar.classList.remove("active");
+    }
 });
 
-// CONTACT FORM
-const form = document.getElementById("contactForm");
+// Scroll Reveal
 
-form.addEventListener("submit", function(e){
-    e.preventDefault();
+const reveals = document.querySelectorAll(".reveal");
 
-    alert("Message Sent Successfully!");
+const observer = new IntersectionObserver(entries => {
 
-    form.reset();
+    entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+        }
+
+    });
+
+},{threshold:0.2});
+
+reveals.forEach(item => {
+    observer.observe(item);
+});
+
+// Gallery Lightbox
+
+const galleryImages =
+document.querySelectorAll(".gallery-grid img");
+
+const lightbox =
+document.querySelector(".lightbox");
+
+const lightboxImg =
+document.querySelector(".lightbox img");
+
+galleryImages.forEach(img => {
+
+    img.addEventListener("click", () => {
+
+        lightbox.style.display = "flex";
+        lightboxImg.src = img.src;
+
+    });
+
+});
+
+lightbox.addEventListener("click", () => {
+
+    lightbox.style.display = "none";
+
 });
